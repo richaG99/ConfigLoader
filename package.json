@@ -1,0 +1,19 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private":true,
+
+  "scripts":{
+    "start":"node ./app/configReader",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "dependencies":{
+    "fs":"*",
+    "line-reader":"*",
+    "winston":"*",
+    "mocha":"*",
+    "chai":"*",
+    "request":"*",
+    "describe":"*"
+  }
+}
