@@ -3,6 +3,10 @@
 ### Introduction
 This utility is written on node.js .The above program loads a config file present at location /config/configFile.txt
 To test the utility, unit tests are written in Mocha framework.
+In app/client.js , config file location and override settings are passed. LoadConfig() method reads the config file and loads the config object. All get operartions are now done on that config object. In case of malformed config.txt file, process will exit.
+Logs are saved inside ConfigLoader/logs/ folder.
+In test.js config file location and override settings are passed to run unit tests.
+
 
 ###Execution Steps
 
@@ -23,6 +27,10 @@ To test the utility, unit tests are written in Mocha framework.
 4. Run the mocha test cases  
      
          npm test      
+
+
+
+
       
   
 
