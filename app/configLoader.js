@@ -15,16 +15,24 @@ var configClass=function(configPath,overrides)
     var overrides=overrides;
     var configObj={};
 
-    this.loadConfig=function(callback )
+    this.loadConfig=function(callback)
     {
-        logger.info("config load started");
-        var params={};
-        params.path=configPath;
-        params.enabledOverRides=overrides;
-        params.configObject=configObj;
+        try {
+            logger.info("config load started");
+            var params = {};
+            params.path = configPath;
+            params.enabledOverRides = overrides;
+            params.configObject = configObj;
+            logger.info("params : " + JSON.stringify(params));
+            configUtil.parseConfigFile(params, callback);
+        }
+        catch(ex)
+        {
+            logger.error(",err :" ,ex);
+            callback(ex);
+            process.exit();
+        }
 
-        logger.info("params : "+ JSON.stringify(params));
-        configUtil.parseConfigFile(params,callback);
     };
 
     this.get=function(setting)

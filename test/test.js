@@ -3,28 +3,40 @@ var assert = require("assert");
 var configLoader=require('../app/configLoader.js') ;
 
 describe('CONFIG_LOADER_TESTS_UBUNTU_PRODUCTION', function() {
-    var config = new configLoader('/Users/richa/Learning/ConfigLoadder/config/configFile.txt',['ubuntu','production']);
+    var config = new configLoader('config/configFile.txt',['ubuntu','production']);
 
     before(function(done) {
         config.loadConfig(done);
     });
 
-    describe('ftp path value retrieval', function() {
-        it('path setting retrivalt', function(){
+    describe('group setting retrieval', function() {
+        it('common config setting ', function(){
+            var settingValue=config.get("common.paid_users_size_limit");
+            expect(settingValue).to.equal("2147483648");
+        });
+    });
+
+    describe('group setting with enabled override retrieval', function() {
+        it('ftp path setting retrieval', function(){
             var settingValue=config.get("ftp.path");
             expect(settingValue).to.equal("/etc/var/uploads");
         });
-    });
 
-    describe('ftp enabled value retrieval', function(){
-        it(' enabled setting retrival', function(){
-            var settingValue = config.get("ftp.enabled");
-            expect(settingValue).to.equal("no");
+        it('http path setting retrieval', function(){
+            var settingValue=config.get("http.path");
+            expect(settingValue).to.equal("/srv/var/tmp/");
         });
     });
 
-    describe('http object retrieval', function() {
-        it('http object retrieval', function(){
+    describe('group setting with not enabled override retrival', function(){
+        it(' common path setting retrival', function(){
+            var settingValue = config.get("common.path");
+            expect(settingValue).to.equal("/srv/var/tmp/");
+        });
+    });
+
+    describe('group object retrival', function() {
+        it('http object retrival', function(){
             var http = config.get("http");
 
             var httpExpected={};

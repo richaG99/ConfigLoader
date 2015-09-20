@@ -1,19 +1,19 @@
 var util=require('./configLoader');
-var x=new util('./config/configFile.txt',['ubuntu','production']);
+var app=new util('./config/configFile.txt',['ubuntu','production']);
+var logger=require('../logger');
 
 var businessLogic=function(err)
 {
     if(err)
     {
-        console.log("error happened........");
-        process.exit();
-
+        logger.error("config load failure."+"\n" , JSON.stringify(err));
     }
-    x.get('ftp');
+    else
+     app.get('ftp');
 
 };
 
-x.loadConfig(businessLogic);
+app.loadConfig(businessLogic);
 
 
 

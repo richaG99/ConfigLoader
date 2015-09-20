@@ -10,6 +10,9 @@ exports.enclosures={
 
 };
 
+exports.LINE_NUMBER = "line number";
+exports.INCORRECT_LINE = "incorrect line";
+
 exports.errors={
     GROUPS_ARE_NOT_PROPERLY_FORMED : "Groups are not properly formed.",
     AT_LEAST_ONE_GROUP_SHOULD_BE_DEFINED: "At least one group should be defined.",

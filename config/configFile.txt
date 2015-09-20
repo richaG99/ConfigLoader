@@ -15,6 +15,6 @@ enabled = no
 [http]
 name = "http uploading"
 path = /tmp/
-path<production> = /srv/var/tmp/
 path<staging> = /srv/uploads/; This is another comment
+path<production> = /srv/var/tmp/
 params = array,of,values
