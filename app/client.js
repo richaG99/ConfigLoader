@@ -8,8 +8,9 @@ var businessLogic=function(err)
     {
         logger.error("config load failure."+"\n" , JSON.stringify(err));
     }
-    else
-     app.get('ftp');
+    else {
+        logger.info(" ftp value " + JSON.stringify(app.get('http')));
+    }
 
 };
 

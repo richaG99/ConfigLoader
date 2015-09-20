@@ -37,8 +37,8 @@ var configClass=function(configPath,overrides)
 
     this.get=function(setting)
     {
+        logger.debug("query setting : "+setting);
         var query=setting.split('.');
-        logger.debug(query);
         if(configObj.hasOwnProperty(query[0])){
           return (query.length == 2 ? ( configObj[query[0]].hasOwnProperty(query[1]) ? configObj[query[0]][query[1]] : "Null" ) : configObj[query[0]] );
         }else
