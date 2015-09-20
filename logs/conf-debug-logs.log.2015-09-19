@@ -1,9 +1,0 @@
-{"level":"debug","message":"configPath : /Users/richa/Learning/ConfigLoadder/config/configFile.txt","timestamp":"2015-09-19T10:02:44.717Z"}
-{"level":"debug","message":"overrides  :ubuntu,production","timestamp":"2015-09-19T10:02:44.720Z"}
-{"level":"info","message":"override is not enabled in config  file  itscript","timestamp":"2015-09-19T10:02:44.729Z"}
-{"level":"info","message":"override is not enabled in config  file  staging","timestamp":"2015-09-19T10:02:44.729Z"}
-{"level":"info","message":"config loaded : {\"common\":{\"basic_size_limit\":\"26214400\",\"student_size_limit\":\"52428800\",\"paid_users_size_limit\":\"2147483648\",\"path\":\"/srv/var/tmp/\"},\"ftp\":{\"name\":\"hello there, ftp uploading\",\"path\":\"/etc/var/uploads\",\"enabled\":\"no\"},\"http\":{\"name\":\"http uploading\",\"path\":\"/srv/var/tmp/\",\"params\":[\"array\",\"of\",\"values\"]}}","timestamp":"2015-09-19T10:02:44.729Z"}
-{"0":"ftp","1":"path","level":"debug","message":"","timestamp":"2015-09-19T10:02:44.730Z"}
-{"0":"ftp","1":"enabled","level":"debug","message":"","timestamp":"2015-09-19T10:02:44.732Z"}
-{"0":"http","level":"debug","message":"","timestamp":"2015-09-19T10:02:44.732Z"}
-{"0":"ftp","1":"lastname","level":"debug","message":"","timestamp":"2015-09-19T10:02:44.733Z"}

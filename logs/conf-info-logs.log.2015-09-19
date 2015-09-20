@@ -1,6 +1,0 @@
-{"level":"info","message":"config load started","timestamp":"2015-09-19T10:02:44.726Z"}
-{"level":"info","message":"params : {\"path\":\"/Users/richa/Learning/ConfigLoadder/config/configFile.txt\",\"enabledOverRides\":[\"ubuntu\",\"production\"],\"configObject\":{}}","timestamp":"2015-09-19T10:02:44.726Z"}
-{"level":"info","message":"parse config file started ","timestamp":"2015-09-19T10:02:44.726Z"}
-{"level":"info","message":"override is not enabled in config  file  itscript","timestamp":"2015-09-19T10:02:44.729Z"}
-{"level":"info","message":"override is not enabled in config  file  staging","timestamp":"2015-09-19T10:02:44.729Z"}
-{"level":"info","message":"config loaded : {\"common\":{\"basic_size_limit\":\"26214400\",\"student_size_limit\":\"52428800\",\"paid_users_size_limit\":\"2147483648\",\"path\":\"/srv/var/tmp/\"},\"ftp\":{\"name\":\"hello there, ftp uploading\",\"path\":\"/etc/var/uploads\",\"enabled\":\"no\"},\"http\":{\"name\":\"http uploading\",\"path\":\"/srv/var/tmp/\",\"params\":[\"array\",\"of\",\"values\"]}}","timestamp":"2015-09-19T10:02:44.729Z"}
