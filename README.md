@@ -7,48 +7,53 @@ In app/client.js , config file location and override settings are passed. LoadCo
 Logs are saved inside ConfigLoader/logs/ folder.
 In test.js config file location and override settings are passed to run unit tests.
 
+#####[Prerequisit]
 
-###Execution Steps [If consumed from git repository]
-
-1. Install Node in the system.
+Install Node in the system. To ensure if Node is working fine in the system:
 
            $ node -v 
            v0.10.32
-    
-2. Clone the repository in the system
 
-          git clone https://github.com/richaG99/ConfigLoader.git
-      
-3. Install required node module for ConfigLoadder
-
-         cd ConfigLoader
-         npm install
-     
-4. Run the mocha test cases  
-
-         npm test
-
-
-5. client.js is a small demo of how an application should load config , before it starts its actual business logic . One can simulate it by following
-     
-          cd ConfigLoader
-          node ./app/client.js
 
 ###Execution Steps [If consumed via zip file]
 
-If user is consuming ConfigLoader.zip file, execution steps are following :
+1. If user is consuming ConfigLoader.zip file, execution steps are following :
 
            unzip ConfigLoader.zip 
            cd ConfigLoader
            npm install
 
-To run the unit test , we do
+2. To run the unit test written in mocha , we do
 
            npm test
      
-To run the demo application file , we use
+3. client.js is a small demo of how an application should load config , before it starts its actual business logic . One can simulate it by following 
 
            node ./app/client.js
+           
+
+###Execution Steps [If consumed from git repository]
+
+
+1. Clone the repository in the system
+
+          git clone https://github.com/richaG99/ConfigLoader.git
+      
+2. Install required node module for ConfigLoadder
+
+         cd ConfigLoader
+         npm install
+     
+3. Run the mocha test cases  
+
+         npm test
+
+
+4. client.js is a small demo of how an application should load config , before it starts its actual business logic . One can simulate it by following
+     
+          cd ConfigLoader
+          node ./app/client.js           
+           
 
 ####Note
 In a production setup, log files should not be the part of the github repository and config file path shouldn't be hard coded.
