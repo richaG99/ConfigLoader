@@ -8,7 +8,7 @@ Logs are saved inside ConfigLoader/logs/ folder.
 In test.js config file location and override settings are passed to run unit tests.
 
 
-###Execution Steps
+###Execution Steps [If consumed from git repository]
 
 1. Install Node in the system.
 
@@ -33,6 +33,22 @@ In test.js config file location and override settings are passed to run unit tes
      
           cd ConfigLoader
           node ./app/client.js
+
+###Execution Steps [If consumed via zip file]
+
+If user is consuming ConfigLoader.zip file, execution steps are following :
+
+           unzip ConfigLoader.zip 
+           cd ConfigLoader
+           npm install
+
+To run the unit test , we do
+
+           npm test
+     
+To run the demo application file , we use
+
+           node ./app/client.js
 
 ####Note
 In a production setup, log files should not be the part of the github repository and config file path shouldn't be hard coded.
