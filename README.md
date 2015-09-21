@@ -64,7 +64,9 @@ Install Node in the system. To ensure if Node is working fine in the system:
 If any error happens in the creating config object, configUtility throws LoggableError() error object to the callback function of configLoader.js and returns from there.
 
 4. ConfigLoader/config/config.txt is the config file which demo application (client.js) tries to load at the start.
-5. All constants and error messages are defined at constants/confConstants.js .
+
+5. All constants and error messages are defined at constants/confConstants.js.
+
 6. All logs are saved inside ConfigLoader/logs/*
 
 #### Note
