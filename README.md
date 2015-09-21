@@ -1,7 +1,7 @@
 ### ConfigLoader
 
 ### Introduction
-This utility is written on node.js .The above program loads a config file present at location /config/configFile.txt
+This utility is written using node.js .The above program loads a config file present at location /config/configFile.txt
 To test the utility, unit tests are written in Mocha framework.
 In app/client.js , config file location and override settings are passed. LoadConfig() method reads the config file and loads the config object. All get operartions are now done on that config object. In case of malformed config.txt file, process will exit.
 Logs are saved inside ConfigLoader/logs/ folder.
