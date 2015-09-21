@@ -7,7 +7,7 @@ In app/client.js , config file location and override settings are passed. LoadCo
 Logs are saved inside ConfigLoader/logs/ folder.
 In test.js config file location and override settings are passed to run unit tests.
 
-#####[Prerequisit]
+#####[Pre-requisit]
 
 Install Node in the system. To ensure if Node is working fine in the system:
 
@@ -54,6 +54,20 @@ Install Node in the system. To ensure if Node is working fine in the system:
           cd ConfigLoader
           node ./app/client.js           
            
+####Description
+
+1. ConfigLoader/app/client.js is the application which requires to load the configuration file. It passes the config file path and override values to configLoader.js and uses configLoader's loadConfig() method to load the config object at the start. If it is successful, it executes rest of the business logic, else exits.
+
+2. ConfigLoader/app/configLoader.js expects config file path, which it requires to load and overrides array. It exposes loadConfig() to load config object and get() methods to get a config object setting. It uses configUtility.js to create configObject from the configFile.txt .
+
+3. ConfigLoader/app/configUtility.js reads the file , create the config object and passes the config object to the callback function of configLoader.js. It is the place where actually file is parsed and config object is created.
+
+If any error happens in the creating config object, configUtility throws LoggableError() error object to the callback function of configLoader.js and returns from there.
+
+4. ConfigLoader/config/config.txt is the config file which demo application (client.js) tries to load at the start.
+5. All constants and error messages are defined at constants/confConstants.js .
+6. All logs are saved inside ConfigLoader/logs/*
+
 
 ####Note
 In a production setup, log files should not be the part of the github repository and config file path shouldn't be hard coded.
